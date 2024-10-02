@@ -7,7 +7,7 @@ public class CreditCardDemo {
         final Money FOURTH_AMOUNT = new Money(990.00);
 
         Person owner = new Person("Christie", "Diane", new Address ("237J Harvey Hall", "Menomonie", "WI", "54751"));
-        CreditCard visa = new CreditCard(owner, LIMIT)
+        CreditCard visa = new CreditCard(owner, LIMIT);
 
         System.out.println(visa.getPersonals());
         System.out.println("Balance: " + visa.getBalance());
@@ -25,13 +25,13 @@ public class CreditCardDemo {
         visa.charge(SECOND_AMOUNT);
         System.out.println("Balance: " + visa.getBalance());
 
-        System.out.println(" ")
+        System.out.println(" ");
 
         System.out.println("Attempt to charge: " + THIRD_AMOUNT);
         visa.charge(THIRD_AMOUNT);
         System.out.println("Balance: " + visa.getBalance());
 
-        System.out.println(" ")
+        System.out.println(" ");
 
         System.out.println("Attempt to charge: " + FOURTH_AMOUNT);
         visa.charge(FOURTH_AMOUNT);
