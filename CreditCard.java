@@ -5,16 +5,16 @@ public class CreditCard {
 
     public CreditCard(Person newCardHolder, Money limit){
         this.owner = newCardHolder;
-        this.creditLimit = limit;
+        this.creditLimit = new Money (limit);
         this.balance = new Money(0);
     }
 
     public Money getBalance(){
-        return balance;
+        return new Money (balance);
     }
 
     public Money getCreditLimit(){
-        return creditLimit;
+        return new Money (creditLimit);
     }
 
     public String getPersonals(){
@@ -24,12 +24,14 @@ public class CreditCard {
     public void charge(Money amount){
         if(balance.add(amount).compareTo(creditLimit) <= 0){
             balance = balance.add(amount);
+            System.out.println("Charge: " + amount);
         }else{
-            throw new IllegalArgumentException("Credit Limit Exceeded");
+            System.out.println("Credit Limit Exceeded");
         }
     }
 
     public void payment(Money amount){
-        balance = balance.subtract(amount);
+        balance.subtract(amount);
+        System.out.println("Payment: " + amount);
     }
 }
