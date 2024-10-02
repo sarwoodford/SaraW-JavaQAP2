@@ -4,7 +4,7 @@ public class MyLine {
     private MyPoint end;
 
     // constructors 
-    public MyLine(MyPoint end, MyPoint begin){
+    public MyLine(MyPoint begin, MyPoint end){
         this.begin = begin;
         this.end = end;
     }
