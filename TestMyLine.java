@@ -6,7 +6,7 @@ public class TestMyLine {
 
         System.out.println("Line Coordinates: " + line1);
         System.out.println("Length: " + line1.getLength());
-        System.out.println("Gradient: " + line1.getGradient());
+        System.out.println("Gradient: " +  String.format("%.2f degrees", Math.toDegrees(line1.getGradient())));
     }
     
 }
