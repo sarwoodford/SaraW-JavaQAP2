@@ -6,7 +6,7 @@ public class Money {
     // constructors 
     public Money(double amount){
         this.dollars = (long) amount;
-        this.cents = (long) ((amount - this.dollars) * 100 );
+        this.cents = Math.round((amount - this.dollars) * 100 );
     }
 
     // copy construtor 
@@ -17,20 +17,25 @@ public class Money {
 
     // methods 
     // add specified amount
+    // changed because .02 in SECOND_AMOUNT was not being handled correctly
     public Money add(Money otherAmount){
         long totalCents = this.cents + otherAmount.cents;
         long extraDollars = totalCents / 100;
         long newCents = totalCents % 100;
         long newDollars = this.dollars + otherAmount.dollars + extraDollars;
-        return new Money(newDollars + newCents / 100);
+        //convertin cents back to a double 
+        double totalAmount = newDollars +  (double)newCents / 100;
+        return new Money(totalAmount);
     }
+    
 
     // subtract specified amount
+    // modified because .02 in SECOND_AMOUNT was not being handled correctly
     public Money subtract(Money otherAmount){
         long totalCents1 = this.dollars * 100 + this.cents;
         long totalCents2 = otherAmount.dollars * 100 + otherAmount.cents;
         long centDiff = totalCents1 - totalCents2;
-        return new Money(centDiff / 100);
+        return new Money(centDiff / 100.0);
     }
 
     // compare balances 
