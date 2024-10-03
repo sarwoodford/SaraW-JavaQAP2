@@ -31,18 +31,19 @@ public class MyLine {
         this.end = end;
     }
 
-    // methods 
-
+    // calculate length of line
     public double getLength(){
         return Math.hypot(end.getX() - begin.getX(), end.getY() - begin.getY());
     }
 
+    // calculate angle 
     public double getGradient(){
         double xDiff = end.getX() - begin.getX();
         double yDiff = end.getY() - begin.getY();
         return Math.atan2(yDiff, xDiff);
     }
 
+    // display results 
     public String toString(){
         return "My Line [begin= " + begin + ", end= " + end + "]";
     }

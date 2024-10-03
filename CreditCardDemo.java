@@ -1,11 +1,13 @@
 public class CreditCardDemo {
     public static void main(String[] args){
+        // create new Money objects in amounts specified in rubric
         final Money LIMIT = new Money(1000.00);
         final Money FIRST_AMOUNT = new Money(200.00);
         final Money SECOND_AMOUNT = new Money(10.02);
         final Money THIRD_AMOUNT = new Money(25.00);
         final Money FOURTH_AMOUNT = new Money(990.00);
 
+        // display results as outlined in rubric 
         Person owner = new Person("Christie", "Diane", new Address ("237J Harvey Hall", "Menomonie", "WI", "54751"));
         CreditCard visa = new CreditCard(owner, LIMIT);
 

@@ -1,17 +1,22 @@
 public class Money {
+    // assign attributes
     private long dollars;
     private long cents;
 
+    // constructors 
     public Money(double amount){
         this.dollars = (long) amount;
         this.cents = (long) ((amount - this.dollars) * 100 );
     }
 
+    // copy construtor 
     public Money(Money otherObject){
         this.dollars = otherObject.dollars;
         this.cents = otherObject.cents;
     }
 
+    // methods 
+    // add specified amount
     public Money add(Money otherAmount){
         long totalCents = this.cents + otherAmount.cents;
         long extraDollars = totalCents / 100;
@@ -20,6 +25,7 @@ public class Money {
         return new Money(newDollars + newCents / 100);
     }
 
+    // subtract specified amount
     public Money subtract(Money otherAmount){
         long totalCents1 = this.dollars * 100 + this.cents;
         long totalCents2 = otherAmount.dollars * 100 + otherAmount.cents;
@@ -27,6 +33,7 @@ public class Money {
         return new Money(centDiff / 100);
     }
 
+    // compare balances 
     public int compareTo(Money otherObject){
         if (this.dollars > otherObject.dollars || this.dollars == otherObject.dollars && this.cents > otherObject.cents){
             return  1;
@@ -37,10 +44,12 @@ public class Money {
         }
     }
 
+    // compare balances to see if they're equal
     public boolean equals(Money otherObject){
         return this.dollars == otherObject.dollars && this.cents == otherObject.cents;
     }
 
+    // display results
     public String toString(){
         return ("$" + this.dollars + "." + String.format("%02d",this.cents));
     }
