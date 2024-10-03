@@ -38,7 +38,7 @@ public class CreditCard {
 
     // payments come out of balance
     public void payment(Money amount){
-        balance.subtract(amount);
+        balance = balance.subtract(amount);
         System.out.println("Payment: " + amount);
     }
 }
