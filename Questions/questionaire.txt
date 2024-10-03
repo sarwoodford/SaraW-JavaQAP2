@@ -1,0 +1,38 @@
+1.	How many hours did it take you to complete this assessment? 
+(Please keep try to keep track of how many hours you have spent 
+working on each individual part of this assessment as best you can -
+ an estimation is fine; we just want a rough idea.)
+
+A: around 3 hours. The simpler classes like Address and Person took around 5 minutes 
+and more complex classes like Money took up most of my time becuase i had to research
+unfamilliar topics, probably close to 30-45 mins. 
+
+2.	What online resources you have used? (My lectures, YouTube, Stack overflow etc.)
+
+A: StackOverflow, GeeksforGeeks, W3Schools
+
+3.	Did you need to ask any of your friends in solving the problems. 
+(If yes, please mention name of the friend. They must be amongst your 
+class fellows.)
+
+A: no
+
+4.	Did you need to ask questions to any of your instructors?
+ If so, how many questions did you ask (or how many help sessions 
+ did you require)?
+
+A: no
+
+5.	Rate (subjectively) the difficulty of each question from your own
+ perspective, and whether you feel confident that you can solve a similar
+  but different problem requiring some of the same techniques in the future
+   now that you’ve completed this one.
+
+A: Probelm #1 - 2/10, could confidently do a similar question
+
+   Problem #2 - 3/10, confused me a little to start but could
+                      confidently do a similar question now
+                      
+   Problem #3 - 6.5/10, required some research and more thinking
+                        but i could do another similar problem, may
+                        have to refer back to this one for some guidance
